@@ -1,0 +1,10 @@
+.buttons {
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;    /* Vertical alignment */
+  height: 100vh;   
+}
+
+.nes-btn.is-primary {
+  
+} 
