@@ -19,6 +19,42 @@
   height: 100vh;   
 }
 
-.nes-btn.is-primary.green {
+.nes-btn {
   font-family: 'Pokemon Classic';
+  display: inline-block;
+  padding: 10px 20px;
+  border: 4px solid #333;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  outline: none;
 }
+
+/* Primary Button Modifier */
+.nes-btn.is-primary {
+  border-color: #007bff;
+  background-color: #007bff;
+  color: #fff;
+}
+
+* Hover State */
+.nes-btn:hover {
+  background-color: #0056b3; /* Darken background on hover */
+}
+
+/* Active State */
+.nes-btn:active {
+  transform: translateY(2px); /* Simulate button press */
+  background-color: #003d7a; /* Even darker background on active */
+}
+
+/* Focus State */
+.nes-btn:focus {
+  outline: 3px dashed #007bff; /* Retro-style focus outline */
+  outline-offset: 4px;
+}
+
