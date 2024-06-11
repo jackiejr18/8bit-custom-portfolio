@@ -32,6 +32,7 @@
   user-select: none;
   border-style: solid;
   border-width: 4px;
+  transition: all 0.2s ease-in-out;
 }
 
 
@@ -46,6 +47,13 @@
   background-color: #1678c2; /* Darker shade for hover */
 }
 
+.nes-btn.is-primary:hover {
+  background-color: #2a5bff;
+  background-image: linear-gradient(to bottom, #2a5bff, #1f4bff);
+  border-color: #1f4bff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
 /* Active State */
 .nes-btn:active {
   transform: translate(.2em, .2em);
@@ -56,6 +64,10 @@
 .nes-btn:focus {
   outline: .1em dashed #333;
   outline-offset: .2em;
+}
+
+.nes-btn.is-primary:focus {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
 button {
