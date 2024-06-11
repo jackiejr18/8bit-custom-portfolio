@@ -21,43 +21,59 @@
 
 .nes-btn {
   font-family: 'Pokemon Classic';
+  border-image-slice: 2;
+  border-image-width: 2;
+  border-image-repeat: stretch;
+  border-image-source:url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>') ;
+  border-image-outset: 2;
+  position: relative;
   display: inline-block;
-  padding: 8px 16px;
-  border: 4px solid #212529;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #212529;
-  font-size: 1rem;
-  text-align: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  outline: none;
-  box-shadow: 2px 2px 0 #212529, -2px -2px 0 #fff;
-  transition: background-color 0.1s, transform 0.1s, box-shadow 0.1s;
+  padding: 6px 8px;
+  user-select: none;
+  border-style: solid;
+  border-width: 4px;
 }
+
 
 /* Primary Button Modifier */
 .nes-btn.is-primary {
-  border-color: #209cee;
   background-color: #209cee;
   color: #fff;
-  box-shadow: 2px 2px 0 #212529, -2px -2px 0 #93d8f8;
 }
 
 * Hover State */
 .nes-btn:hover {
-  background-color: #47afff;
+  background-color: #1678c2; /* Darker shade for hover */
 }
 
 /* Active State */
 .nes-btn:active {
-  transform: translate(2px, 2px);
+  transform: translate(.2em, .2em);
   box-shadow: none;
 }
 
 /* Focus State */
 .nes-btn:focus {
-  outline: 2px dashed #209cee;
-  outline-offset: 4px;
+  outline: .1em dashed #333;
+  outline-offset: .2em;
 }
 
+button {
+  webkit-appearance: none;
+  text-transform: none;
+  overflow: visible;
+  border-radius: 0;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-color: buttonborder;
+}
+
+.nes-btn.is-primary::after {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  content: "";
+  box-shadow: inset -4px -4px #006bb3;
+}
